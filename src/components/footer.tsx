@@ -34,7 +34,7 @@ export function Footer() {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-white font-bold text-lg">D</span>
+                <span className="text-slate-800 font-bold text-lg">D</span>
               </motion.div>
               <motion.span 
                 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent"
@@ -200,7 +200,7 @@ export function Footer() {
             animate={{ y: [0, -2, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <ArrowUp className="h-5 w-5 text-white" />
+            <ArrowUp className="h-5 w-5 text-slate-100" />
           </motion.div>
         </Button>
       </motion.div>

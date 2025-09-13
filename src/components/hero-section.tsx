@@ -85,13 +85,13 @@ export function HeroSection() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <Button size="lg" className="text-lg px-8 py-6 hover-lift hover-glow bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white border-0 shadow-lg hover:shadow-slate-500/25">
+              <Button size="lg" className="text-lg px-8 py-6 hover-lift hover-glow bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-slate-100 border-0 shadow-lg hover:shadow-slate-500/25">
                 Start Comparing
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <ArrowRight className="ml-2 h-5 w-5 text-white" />
+                  <ArrowRight className="ml-2 h-5 w-5 text-slate-100" />
                 </motion.div>
               </Button>
             </motion.div>

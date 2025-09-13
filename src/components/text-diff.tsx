@@ -204,7 +204,7 @@ export function TextDiff({ className }: TextDiffProps) {
             variant={viewMode === 'side-by-side' ? 'default' : 'outline'}
             size="sm"
             onClick={() => setViewMode('side-by-side')}
-            className={`group ${viewMode === 'side-by-side' ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 shadow-lg hover:shadow-blue-500/25' : 'border-blue-500/50 text-blue-600 hover:bg-blue-50 hover:border-blue-600'}`}
+            className={`group ${viewMode === 'side-by-side' ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-slate-100 border-0 shadow-lg hover:shadow-blue-500/25' : 'border-blue-500/50 text-blue-600 hover:bg-blue-50 hover:border-blue-600'}`}
           >
             <motion.div
               animate={{ rotate: viewMode === 'side-by-side' ? 360 : 0 }}
@@ -218,7 +218,7 @@ export function TextDiff({ className }: TextDiffProps) {
             variant={viewMode === 'inline' ? 'default' : 'outline'}
             size="sm"
             onClick={() => setViewMode('inline')}
-            className={`group ${viewMode === 'inline' ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 shadow-lg hover:shadow-blue-500/25' : 'border-blue-500/50 text-blue-600 hover:bg-blue-50 hover:border-blue-600'}`}
+            className={`group ${viewMode === 'inline' ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-slate-100 border-0 shadow-lg hover:shadow-blue-500/25' : 'border-blue-500/50 text-blue-600 hover:bg-blue-50 hover:border-blue-600'}`}
           >
             <motion.div
               animate={{ rotate: viewMode === 'inline' ? 360 : 0 }}

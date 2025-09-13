@@ -306,6 +306,7 @@ export function FileDiff({ className }: FileDiffProps) {
                     originalFileInputRef.current?.click();
                   }}
                   disabled={isLoading}
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-slate-100 border-0 shadow-lg hover:shadow-blue-500/25"
                 >
                   <Upload className="h-4 w-4 mr-2" />
                   Choose File
@@ -379,6 +380,7 @@ export function FileDiff({ className }: FileDiffProps) {
                     modifiedFileInputRef.current?.click();
                   }}
                   disabled={isLoading}
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-slate-100 border-0 shadow-lg hover:shadow-blue-500/25"
                 >
                   <Upload className="h-4 w-4 mr-2" />
                   Choose File

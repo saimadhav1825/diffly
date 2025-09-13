@@ -25,8 +25,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           'inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden group',
           {
-            'bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-primary-500/25 border border-primary-500/20': variant === 'default',
-            'bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-600 hover:to-red-700 shadow-lg hover:shadow-red-500/25 border border-red-500/20': variant === 'destructive',
+            'bg-gradient-to-r from-primary-500 to-primary-600 text-slate-100 hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-primary-500/25 border border-primary-500/20': variant === 'default',
+            'bg-gradient-to-r from-red-500 to-red-600 text-slate-100 hover:from-red-600 hover:to-red-700 shadow-lg hover:shadow-red-500/25 border border-red-500/20': variant === 'destructive',
             'border-2 border-border bg-background/50 hover:bg-background hover:border-primary-500/50 hover:shadow-lg hover:shadow-primary-500/10 backdrop-blur-sm': variant === 'outline',
             'bg-gradient-to-r from-muted to-muted/80 text-muted-foreground hover:from-muted/80 hover:to-muted border border-border/50': variant === 'secondary',
             'hover:bg-muted/50 hover:text-foreground': variant === 'ghost',

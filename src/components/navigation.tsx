@@ -43,7 +43,7 @@ export function Navigation() {
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="text-white font-bold text-lg">D</span>
+                <span className="text-slate-800 font-bold text-lg">D</span>
               </motion.div>
               <motion.span 
                 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent"
