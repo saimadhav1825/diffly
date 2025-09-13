@@ -200,7 +200,7 @@ export function Footer() {
             animate={{ y: [0, -2, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <ArrowUp className="h-5 w-5 text-slate-100" />
+                  <ArrowUp className="h-5 w-5 text-slate-100" />
           </motion.div>
         </Button>
       </motion.div>

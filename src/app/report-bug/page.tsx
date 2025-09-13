@@ -247,15 +247,15 @@ export default function ReportBugPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center"
             >
-              <Button type="submit" size="lg" className="group">
-                <Send className="h-5 w-5 mr-2" />
-                Submit Bug Report
+              <Button type="submit" size="lg" className="group bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white border-0 shadow-lg hover:shadow-red-500/25 transition-all duration-300">
+                <Send className="h-5 w-5 mr-2 text-white" />
+                <span className="text-white font-medium">Submit Bug Report</span>
                 <motion.div
                   animate={{ x: 0 }}
                   whileHover={{ x: 3 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Send className="h-5 w-5 ml-2" />
+                  <Send className="h-5 w-5 ml-2 text-white" />
                 </motion.div>
               </Button>
             </motion.div>

@@ -39,9 +39,9 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <motion.div 
-                className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 flex items-center justify-center shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                whileTap={{ scale: 0.95 }}
+                className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 flex items-center justify-center shadow-lg"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
               >
                 <span className="text-slate-800 font-bold text-lg">D</span>
               </motion.div>

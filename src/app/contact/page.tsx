@@ -181,15 +181,15 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300 resize-none"
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full group">
-                  <Send className="h-5 w-5 mr-2" />
-                  Send Message
+                <Button type="submit" size="lg" className="w-full group bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-slate-100 border border-slate-600 hover:border-slate-500 shadow-lg hover:shadow-slate-500/20 transition-all duration-300">
+                  <Send className="h-5 w-5 mr-2 text-slate-100" />
+                  <span className="text-slate-100 font-medium">Send Message</span>
                   <motion.div
                     animate={{ x: 0 }}
                     whileHover={{ x: 3 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Send className="h-5 w-5 ml-2" />
+                    <Send className="h-5 w-5 ml-2 text-slate-100" />
                   </motion.div>
                 </Button>
               </form>
@@ -203,42 +203,6 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-8"
           >
-            {/* Quick Contact */}
-            <div className="bg-background/50 rounded-xl border border-border/50 p-8">
-              <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary-500/10 rounded-lg">
-                    <Mail className="h-6 w-6 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">support@diffly.com</p>
-                    <p className="text-sm text-muted-foreground">We typically respond within 24 hours</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary-500/10 rounded-lg">
-                    <Github className="h-6 w-6 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">GitHub</h3>
-                    <p className="text-muted-foreground">github.com/saimadhav1825/diffly</p>
-                    <p className="text-sm text-muted-foreground">Report issues and contribute</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary-500/10 rounded-lg">
-                    <Twitter className="h-6 w-6 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Twitter</h3>
-                    <p className="text-muted-foreground">@diffly_app</p>
-                    <p className="text-sm text-muted-foreground">Follow for updates and news</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* FAQ Link */}
             <div className="bg-gradient-to-r from-primary-500/5 to-purple-500/5 rounded-xl border border-primary-500/20 p-8">
@@ -253,24 +217,6 @@ export default function ContactPage() {
               </Link>
             </div>
 
-            {/* Response Time */}
-            <div className="bg-muted/30 rounded-xl border border-border/50 p-6">
-              <h3 className="font-semibold mb-2">Response Times</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div className="flex justify-between">
-                  <span>General Questions:</span>
-                  <span>24-48 hours</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Bug Reports:</span>
-                  <span>12-24 hours</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Technical Support:</span>
-                  <span>6-12 hours</span>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
