@@ -65,7 +65,7 @@ export function Navigation() {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-all duration-300 font-medium rounded-lg hover:bg-muted/50 group"
+                className="relative px-4 py-2 text-slate-600 hover:text-slate-900 transition-all duration-300 font-medium rounded-lg hover:bg-slate-100/50 group dark:text-slate-400 dark:hover:text-slate-100 dark:hover:bg-slate-800/50"
                 whileHover={{ 
                   scale: 1.05,
                   y: -2
@@ -86,12 +86,12 @@ export function Navigation() {
                   {item.name}
                 </motion.span>
                 <motion.div
-                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-600 group-hover:w-full transition-all duration-300"
+                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 group-hover:w-full transition-all duration-300"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
                 />
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </motion.a>
             ))}
@@ -105,7 +105,7 @@ export function Navigation() {
             {/* Theme Toggle */}
             <motion.button
               onClick={toggleTheme}
-              className="relative p-3 rounded-xl bg-muted/50 hover:bg-muted transition-all duration-300 border border-border/50 hover:border-primary-500/50 hover:shadow-lg hover:shadow-primary-500/10"
+              className="relative p-3 rounded-xl bg-slate-100/50 hover:bg-slate-200 transition-all duration-300 border border-slate-200/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 dark:bg-slate-800/50 dark:hover:bg-slate-700 dark:border-slate-700/50 dark:hover:border-blue-400/50"
               aria-label="Toggle theme"
               whileHover={{ scale: 1.05, rotate: 15 }}
               whileTap={{ scale: 0.95 }}
@@ -125,7 +125,7 @@ export function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors duration-200"
+              className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors duration-200 dark:hover:bg-slate-800"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
@@ -139,13 +139,13 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border py-4">
+          <div className="md:hidden border-t border-slate-200 dark:border-slate-700 py-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium px-2 py-1"
+                  className="text-slate-600 hover:text-slate-900 transition-colors duration-200 font-medium px-2 py-1 dark:text-slate-400 dark:hover:text-slate-100"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
