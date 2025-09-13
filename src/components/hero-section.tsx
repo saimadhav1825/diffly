@@ -126,28 +126,52 @@ export function HeroSection() {
           >
             <motion.h1 
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.9, y: 50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
             >
-              Find Differences{' '}
+              <motion.span
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                Find Differences{' '}
+              </motion.span>
               <motion.span 
                 className="bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent gradient-shift"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
+                initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 80 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.3 }
+                }}
               >
                 Instantly
               </motion.span>
             </motion.h1>
             <motion.p 
               className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 60 }}
             >
-              Compare text, code, files, and folders with our modern, feature-rich diff checker. 
-              Fast, accurate, and beautifully designed.
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+              >
+                Compare text, code, files, and folders with our modern, feature-rich diff checker.
+              </motion.span>
+              <br />
+              <motion.span
+                className="font-semibold bg-gradient-to-r from-primary-500/80 to-primary-600/80 bg-clip-text text-transparent"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
+                Fast, accurate, and beautifully designed.
+              </motion.span>
             </motion.p>
           </motion.div>
 

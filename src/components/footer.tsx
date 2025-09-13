@@ -30,15 +30,42 @@ export function Footer() {
           >
             <div className="flex items-center space-x-3">
               <motion.div 
-                className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 flex items-center justify-center shadow-lg"
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 flex items-center justify-center shadow-lg relative overflow-hidden"
+                whileHover={{ 
+                  scale: 1.1, 
+                  rotate: 5,
+                  boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)"
+                }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-slate-800 font-bold text-lg">D</span>
+                <motion.span 
+                  className="text-slate-800 font-bold text-lg relative z-10"
+                  animate={{ 
+                    textShadow: [
+                      "0 0 5px rgba(30, 41, 59, 0.3)",
+                      "0 0 10px rgba(30, 41, 59, 0.5)",
+                      "0 0 5px rgba(30, 41, 59, 0.3)"
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  D
+                </motion.span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                  animate={{ 
+                    x: [-100, 100],
+                    transition: { duration: 3, repeat: Infinity, ease: "linear" }
+                  }}
+                />
               </motion.div>
               <motion.span 
                 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  backgroundPosition: "200% 50%"
+                }}
+                transition={{ duration: 0.3 }}
               >
                 Diffly
               </motion.span>

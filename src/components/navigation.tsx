@@ -66,17 +66,32 @@ export function Navigation() {
                 key={item.name}
                 href={item.href}
                 className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-all duration-300 font-medium rounded-lg hover:bg-muted/50 group"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                initial={{ opacity: 0, y: -20, x: -20 }}
+                animate={{ opacity: 1, y: 0, x: 0 }}
+                transition={{ 
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
               >
-                {item.name}
+                <motion.span
+                  whileHover={{ x: 3 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {item.name}
+                </motion.span>
                 <motion.div
                   className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-600 group-hover:w-full transition-all duration-300"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
+                />
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </motion.a>
             ))}
