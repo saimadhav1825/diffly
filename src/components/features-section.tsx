@@ -100,19 +100,43 @@ export function FeaturesSection() {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100
+              }}
               viewport={{ once: true }}
-              className="group p-6 rounded-xl border border-border bg-background/50 backdrop-blur-sm hover:bg-background/80 transition-all duration-300 hover:shadow-lg hover:border-primary-500/20"
+              whileHover={{ 
+                y: -8,
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+              className="group p-6 rounded-xl border border-border bg-background/50 backdrop-blur-sm hover:bg-background/80 transition-all duration-300 hover:shadow-xl hover:border-primary-500/20 relative overflow-hidden"
             >
-              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-500/10 text-primary-500 mb-4 group-hover:bg-primary-500/20 transition-colors">
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+              <motion.div 
+                className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-500/10 text-primary-500 mb-4 group-hover:bg-primary-500/20 transition-colors relative z-10"
+                whileHover={{ 
+                  rotate: 360,
+                  scale: 1.1
+                }}
+                transition={{ duration: 0.6 }}
+              >
                 <feature.icon className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
+              </motion.div>
+              <motion.h3 
+                className="text-lg font-semibold text-foreground mb-2 relative z-10"
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.2 }}
+              >
                 {feature.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              </motion.h3>
+              <p className="text-muted-foreground text-sm leading-relaxed relative z-10">
                 {feature.description}
               </p>
             </motion.div>

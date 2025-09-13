@@ -1,13 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, Search, ChevronDown, ChevronUp, HelpCircle, FileText, Code, Upload, FolderOpen } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ChevronUp, HelpCircle, FileText, Code, Upload, FolderOpen } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
 export default function HelpPage() {
-  const [searchQuery, setSearchQuery] = useState('');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
   const faqs = [
@@ -66,10 +65,6 @@ export default function HelpPage() {
     }
   ];
 
-  const filteredFAQs = faqs.filter(faq => 
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
@@ -110,24 +105,6 @@ export default function HelpPage() {
           </p>
         </motion.div>
 
-        {/* Search */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto mb-12"
-        >
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <input
-              type="text"
-              placeholder="Search help articles..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-border rounded-xl bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500/50 transition-all duration-300"
-            />
-          </div>
-        </motion.div>
 
         {/* Features Overview */}
         <motion.div
@@ -169,7 +146,7 @@ export default function HelpPage() {
         >
           <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {filteredFAQs.map((faq, index) => (
+            {faqs.map((faq, index) => (
               <motion.div
                 key={faq.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -223,14 +200,14 @@ export default function HelpPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button className="group">
-                  Contact Us
+                <Button className="group bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-slate-100 border-0 shadow-lg hover:shadow-slate-500/25 transition-all duration-300">
+                  <span className="text-slate-100 font-medium">Contact Us</span>
                   <motion.div
                     animate={{ x: 0 }}
                     whileHover={{ x: 3 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <ArrowLeft className="h-4 w-4 ml-2 rotate-180" />
+                    <ArrowLeft className="h-4 w-4 ml-2 rotate-180 text-slate-100" />
                   </motion.div>
                 </Button>
               </Link>

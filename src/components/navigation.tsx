@@ -32,7 +32,12 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/40 shadow-sm">
+    <motion.nav 
+      className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/40 shadow-sm"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -109,9 +114,9 @@ export function Navigation() {
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
-                <X className="h-5 w-5 text-foreground" />
+                <X className="h-5 w-5 text-slate-900 dark:text-slate-100" />
               ) : (
-                <Menu className="h-5 w-5 text-foreground" />
+                <Menu className="h-5 w-5 text-slate-900 dark:text-slate-100" />
               )}
             </button>
           </div>
@@ -135,6 +140,6 @@ export function Navigation() {
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 }
